@@ -1,4 +1,23 @@
-"scripts": {
-  "start": "node app.js",
-  "test": "echo \"No tests yet\""
+{
+  "name": "devsecops-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdpatilonline/Webdemo_DevSecOps_GithubAction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdpatilonline/Webdemo_DevSecOps_GithubAction/issues"
+  },
+  "homepage": "https://github.com/jdpatilonline/Webdemo_DevSecOps_GithubAction#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
