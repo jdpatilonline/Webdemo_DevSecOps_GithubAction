@@ -41,9 +41,11 @@ jobs:
 
       - name: Run OWASP ZAP Baseline Scan
         run: |
+          mkdir -p tmp
+          chmod -R 777 tmp
           docker run --rm -u 0 \
             -v $(pwd):/zap/wrk:rw \
              zaproxy/zap-stable zap-baseline.py \
             -t http://testphp.vulnweb.com/ \
-            -r /tmp/zap-report.html
+            -r tmp/zap-report.html
             
