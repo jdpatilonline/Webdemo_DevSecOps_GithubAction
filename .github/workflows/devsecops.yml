@@ -38,7 +38,9 @@ jobs:
           npm start &
           echo "Web App Started on port 3000"
           sleep 15
-
+      - name: Test target reachability
+        run: curl -I http://testphp.vulnweb.com/
+        
       - name: Run OWASP ZAP Baseline Scan
         run: |
           mkdir -p tmp
@@ -47,5 +49,5 @@ jobs:
             -v $(pwd):/zap/wrk:rw \
              zaproxy/zap-stable zap-baseline.py \
             -t http://testphp.vulnweb.com/ \
-            -r tmp/zap-report.html
+            -r tmp/zap-report.html -d --exit-code -1
             
