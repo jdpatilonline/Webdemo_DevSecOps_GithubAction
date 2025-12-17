@@ -19,7 +19,7 @@ jobs:
       - name: TruffleHog Secrets Scan
         uses: trufflesecurity/trufflehog@v3.0.7
         with:
-          path: .
+          path: --scan .
           
       - name: Semgrep SAST Scan
         uses: returntocorp/semgrep-action@v1
